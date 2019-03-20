@@ -11,7 +11,7 @@ public class App {
         String [] parameters = new String[4];
         String [] labels = {"Insira a quantidade de lugares: ", "Insira a quantidade de transições: ", "Insira a quantidade de marcas: ", "Insira o peso de cada arco: "};
         int value;
-
+        String trackingTest = "";
         for(int i=0; i<4; i++){
             try {
                 System.out.println(labels[i]);
