@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args){
         FileController fileController = new FileController();
-        Scanner scanner = new Scanner(System.in);
+        /*Scanner scanner = new Scanner(System.in);
         String [] parameters = new String[4];
         String [] labels = {"Insira a quantidade de lugares: ", "Insira a quantidade de transições: ", "Insira a quantidade de marcas: ", "Insira o peso de cada arco: "};
         int value;
@@ -27,11 +27,19 @@ public class App {
             fileController.writeToFile("test.txt", parameters);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
+
         try {
             System.out.println(fileController.readFile("test.txt"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
+
+
+
+
     }
 }

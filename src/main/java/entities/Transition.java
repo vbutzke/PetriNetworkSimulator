@@ -19,34 +19,6 @@ public class Transition {
         setEnabled(places);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public LinkedList<Arc> getInArcs() {
-        return inArcs;
-    }
-
-    public void setInArcs(LinkedList<Arc> inArcs) {
-        this.inArcs = inArcs;
-    }
-
-    public LinkedList<Arc> getOutArcs() {
-        return outArcs;
-    }
-
-    public void setOutArcs(LinkedList<Arc> outArcs) {
-        this.outArcs = outArcs;
-    }
-
-    public boolean isEnabled() {
-        return isEnabled;
-    }
-
     private void setEnabled(Hashtable<String, Integer> places) {
 
         int count = 0;
@@ -62,11 +34,7 @@ public class Transition {
         }
     }
 
-    public void execute(Hashtable<String, Integer> places){
-
-    }
-
-    public Hashtable<String, Integer> updateNetwork(Hashtable<String, Integer> places){
+    public Hashtable<String, Integer> execute(Hashtable<String, Integer> places){
 
         if(isEnabled){
             places = updatePlaces(inArcs, places, inArc);
