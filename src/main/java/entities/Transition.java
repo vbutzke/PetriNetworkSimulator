@@ -19,12 +19,12 @@ public class Transition {
         setEnabled(places);
     }
 
-    private void setEnabled(Hashtable<String, Integer> places) {
+    public void setEnabled(Hashtable<String, Integer> places) {
 
         int count = 0;
         boolean statusChange = false;
 
-        while(count < inArcs.size() || statusChange == false){
+        while(count < inArcs.size() && statusChange == false){
             if((inArcs.get(count).getWeight() >  places.get(inArcs.get(count).getOrigin()) && isEnabled) ||
                (inArcs.get(count).getWeight() <= places.get(inArcs.get(count).getOrigin()) && !isEnabled)){
                 statusChange = true;
@@ -32,6 +32,14 @@ public class Transition {
             }
             count++;
         }
+    }
+
+    public boolean isEnabled() {
+        return isEnabled;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public Hashtable<String, Integer> execute(Hashtable<String, Integer> places){
@@ -66,6 +74,31 @@ public class Transition {
         return places;
     }
 
-    //validação nos in arcs pra quando tem conflito por marca
-    //algoritmo de sorteio
+    public LinkedList<Arc> getInArcs() {
+        return inArcs;
+    }
+
+    public LinkedList<Arc> getOutArcs() {
+        return outArcs;
+    }
+
+    public void printTransition(){
+        System.out.println("Transition: "+name);
+        System.out.println("In Arcs: ");
+        for (Arc arc: inArcs) {
+            arc.printArc();
+        }
+        System.out.println("Out Arcs: ");
+        for (Arc arc2: outArcs) {
+            arc2.printArc();
+        }
+        System.out.println("Is enabled: " +isEnabled);
+        System.out.println();
+    }
+
+    //TODO validação nos in arcs pra quando tem conflito por marca
+    //TODO algoritmo de sorteio
+    //TODO tratamento de erros
+    //TODO instruções para user input
+    //TODO controle por ciclo
 }

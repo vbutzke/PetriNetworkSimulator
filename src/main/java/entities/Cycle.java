@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class Cycle {
 
     private int step;
-    private Hashtable<String, Integer> places;
+    private Hashtable<String, Integer> places = new Hashtable<>();
     private LinkedList<Arc> arcs = new LinkedList<>();
     private LinkedList<Transition> transitions = new LinkedList<>();
 
@@ -17,16 +17,16 @@ public class Cycle {
         fillTransitions(transitionsLine);
     }
 
-    public void fillPlaces(String line){
+    private void fillPlaces(String line){
         String [] tokens = line.split(",");
 
         for (String token : tokens) {
             String[] placeMarkPair = token.split(" ");
-            places.put(placeMarkPair[0], Integer.parseInt(placeMarkPair[1].substring(1)));
+            places.put(placeMarkPair[0], Integer.parseInt(placeMarkPair[1]));
         }
     }
 
-    public void fillArcs(String line){
+    private void fillArcs(String line){
         String [] tokens = line.split(",");
 
         for (String token : tokens) { //AN L1 T1 / AN T1 L1}
@@ -36,7 +36,7 @@ public class Cycle {
         }
     }
 
-    public void fillTransitions(String line){
+    private void fillTransitions(String line){
         String [] tokens = line.split(",");
         LinkedList<Arc> inArcs = new LinkedList<>();
         LinkedList<Arc> outArcs = new LinkedList<>();
@@ -51,6 +51,19 @@ public class Cycle {
             }
             transitions.add(new Transition(token, inArcs, outArcs, places));
         }
+    }
+
+    public void execute(){
+
+        for (int i=0; i<transitions.size(); i++){
+            places = transitions.get(i).execute(places);
+            transitions.get(i).setEnabled(places);
+            if(transitions.get(i).isEnabled()){
+                i--;
+            }
+        }
+
+        nextStep();
     }
 
     public int getStep() {
@@ -69,7 +82,36 @@ public class Cycle {
         return transitions;
     }
 
-    public void nextStep(){
+    private void nextStep(){
         step++;
     }
+
+    public void interactiveInput(String placesLine, String transitionsLine, String arcsLine){
+        fillPlaces(placesLine);
+        fillArcs(arcsLine);
+        fillTransitions(transitionsLine);
+    }
+
+    public void printCycle(){
+        System.out.println("Step: "+step);
+        System.out.println("Places: ");
+        for (String key: places.keySet()) {
+            System.out.println(key+" - "+places.get(key));
+        }
+        System.out.println();
+        System.out.println("Arcs: ");
+        for (Arc arc: arcs) {
+            arc.printArc();
+        }
+        System.out.println();
+        System.out.println("Transitions: ");
+        for (Transition t:transitions) {
+            t.printTransition();
+        }
+        System.out.println();
+    }
+    //TODO print function for all classes
+    //TODO run code inspector
+    //TODO remove unused code
+
 }

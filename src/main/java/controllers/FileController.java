@@ -12,14 +12,18 @@ public class FileController {
         FileReader fileReader = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fileReader);
         String line, file = "";
-        validateFile(br);
+        //validateFile(br);
         while(( line = br.readLine())!=null){
-            Integer.parseInt(line);
-            file = line + "\n";
+           // Integer.parseInt(line);
+            file = file + line + "\n";
         }
         br.close();
         fileReader.close();
         return file;
+    }
+
+    public String[] getLines(String file){
+        return file.split("\n");
     }
 
     public String[] formatContent(String [][] content) {
