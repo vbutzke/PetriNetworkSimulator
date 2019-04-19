@@ -37,6 +37,7 @@ public enum CustomMessages {
                  "   1. Importar de arquivo\n"+
                  "   2. Rede interativa\n"+
                  "   3. Ajuda\n"+
+                 "   4. Sair\n"+
                  "----------------------------------------------\n");
 
     private String message;
