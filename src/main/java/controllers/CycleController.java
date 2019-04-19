@@ -12,6 +12,7 @@ public class CycleController {
      public CycleController(String placesLine, String transitionsLine, String arcsLine){
         cycle = new Cycle(placesLine, transitionsLine, arcsLine);
         outputData = new LinkedList<>();
+        outputData.add(0, "");
      }
 
      public void interactiveInput(String placesLine, String transitionsLine, String arcsLine){
@@ -19,8 +20,9 @@ public class CycleController {
      }
 
      public void executeCycle(){
+         buildOutput();
          cycle.execute();
-        // cycle.printCycle(); //TODO remover essa linha
+         //cycle.printCycle(); //TODO remover essa linha
          buildOutput();
          printOutput();
      }
@@ -31,18 +33,25 @@ public class CycleController {
          Hashtable<String, Integer> places  = cycle.getPlaces();
          LinkedList<Transition> transitions = cycle.getTransitions();
 
+         //TODO formatar passos
+
          for (String key : places.keySet()) {
             header = header + key + " | ";
             line = line + places.get(key) + " | ";
          }
 
+         //TODO formatar places
+
          for (Transition transition : transitions) {
              header = header + transition.getName() + " | "; //TODO formatar output
              line = line + transition.isEnabled() + " | ";
          }
-         outputData.add(0, header);
-         outputData.add(line); //TODO testar com mais de uma linha de output pra ver o que acontece
 
+         //TODO formatar transitions
+
+
+         outputData.set(0, header);
+         outputData.add(line);
      }
 
      private void printOutput(){
