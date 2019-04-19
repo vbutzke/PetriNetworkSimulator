@@ -98,6 +98,5 @@ public class Transition {
 
     //TODO algoritmo de sorteio
     //TODO tratamento de erros
-    //TODO instruções para user input
     //TODO controle por ciclo
 }
