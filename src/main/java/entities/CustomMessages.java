@@ -38,7 +38,11 @@ public enum CustomMessages {
                  "   2. Rede interativa\n"+
                  "   3. Ajuda\n"+
                  "   4. Sair\n"+
-                 "----------------------------------------------\n");
+                 "----------------------------------------------\n"),
+    INVALID_OPTION_ERROR("A opção selecionada não é válida. Por favor selecione 1, 2, 3 ou 4"),
+    HELP_OPTION("Digite 0 para um exemplo de arquivo, ou qualquer outro número para continuar"),
+    DOWNLOAD_OPTION("Digite 0 para fazer o download do arquivo, ou outro número para sair"),
+    DOWNLOAD_COMPLETED("Download Completo!");
 
     private String message;
 

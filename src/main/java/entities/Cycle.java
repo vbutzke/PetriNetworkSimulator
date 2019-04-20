@@ -38,10 +38,10 @@ public class Cycle {
 
     private void fillTransitions(String line){
         String [] tokens = line.split(",");
-        LinkedList<Arc> inArcs = new LinkedList<>();
-        LinkedList<Arc> outArcs = new LinkedList<>();
 
         for (String token : tokens) {
+            LinkedList<Arc> inArcs = new LinkedList<>();
+            LinkedList<Arc> outArcs = new LinkedList<>();
             for (Arc arc : arcs) {
                 if(arc.getOrigin().equalsIgnoreCase(token)){
                     outArcs.add(arc);
@@ -152,7 +152,7 @@ public class Cycle {
             for (Arc a : arcList) {
                 if(a.getOrigin().equalsIgnoreCase(place)) {
                     conflictingArcs.add(a);
-                    arcList.remove(a); //removo o arco da lista de verificação para não adicionar de novo
+                    //arcList.remove(a); //removo o arco da lista de verificação para não adicionar de novo
                     allArcsWeight = allArcsWeight + a.getWeight();
                 }
             }
@@ -174,13 +174,15 @@ public class Cycle {
         do {
             r = (int) (Math.random() * conflictingArcs.size());
             numberOfPlaces = numberOfPlaces - conflictingArcs.get(r).getWeight();
+            conflictingArcs.remove(r);
 
-            for (Arc a : conflictingArcs) {
-                if (a.getWeight() > numberOfPlaces) {
-                    unselectedArcs.add(conflictingArcs.remove(r));
+            for(int i=0; i<conflictingArcs.size(); i++){
+                if (conflictingArcs.get(i).getWeight() > numberOfPlaces) {
+                    unselectedArcs.add(conflictingArcs.remove(i));
                 }
             }
-        } while(numberOfPlaces > 0 && !conflictingArcs.isEmpty());
+
+        } while(numberOfPlaces > 0 && !conflictingArcs.isEmpty()); // loop infinito
 
         return unselectedArcs;
     }
@@ -217,7 +219,6 @@ public class Cycle {
 
         return arcLinkedList;
     }
-
 
     //TODO controle por ciclo
 

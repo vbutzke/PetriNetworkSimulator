@@ -60,4 +60,12 @@ public class CycleController {
          }
      }
 
+     public String[] getOutputData(){
+         String[] output =  new String[outputData.size()];
+         for (int i=0; i< outputData.size(); i++){
+            output[i] = outputData.get(i);
+         }
+         return output;
+     }
+
 }
