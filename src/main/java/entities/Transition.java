@@ -96,7 +96,4 @@ public class Transition {
         System.out.println();
     }
 
-    //TODO algoritmo de sorteio
-    //TODO tratamento de erros
-    //TODO controle por ciclo
 }

@@ -54,20 +54,36 @@ public class Cycle {
     }
 
     public void execute(){
-        //TODO a validação de marca e sorteio tem que ser aqui porque as transações são diferentes in arcs
-        // tenho que atualizar os lugares  também e acho que as transações também
-
-
+        LinkedList<Arc> unselectedArcs = mapAndSolveConflicts(); // pego arcos que NÃO devem ser executados
+        boolean isArcOnTransition;
 
         for (int i=0; i<transitions.size(); i++){
-            places = transitions.get(i).execute(places);
+            isArcOnTransition = false;
+            for (Arc a: unselectedArcs) {
+                if(isArcOnTransition(transitions.get(i), a)){ //se o algum arco não selecionado está na transição atual
+                    isArcOnTransition = true;
+                    break;
+                }
+            }
+
+            if(!isArcOnTransition){ //se não tenho conflitos nos arcos da transição, executo ela
+                places = transitions.get(i).execute(places);
+            }
             transitions.get(i).setEnabled(places);
             if(transitions.get(i).isEnabled()){
                 i--;
             }
         }
-
         nextStep();
+    }
+
+    private boolean isArcOnTransition(Transition transition, Arc arc){
+        for (Arc transArc: transition.getInArcs()) {
+            if (transArc == arc)
+                return true;
+        }
+
+        return false;
     }
 
     public int getStep() {
@@ -122,11 +138,12 @@ public class Cycle {
         }
     }
 
-    private void mapAndSolveConflicts(){
+    private LinkedList<Arc> mapAndSolveConflicts(){
 
         LinkedList<Arc> arcList = getAllPlaceToTransitionArcs();
         LinkedList<String> placesList = getAllDistinctPlaces(arcList);
         int allArcsWeight = 0;
+        LinkedList<Arc> unselectedArcs = new LinkedList<>();
 
         for (String place : placesList) {
             //para cada lugar específico, procuro na lista de arcos possíveis os conflitantes
@@ -139,27 +156,33 @@ public class Cycle {
                     allArcsWeight = allArcsWeight + a.getWeight();
                 }
             }
-            //verifico se o peso dos arcos é menor a quantidade de marcas, se sim, faz o sorteio
+            //verifico se o peso dos arcos é maior a quantidade de marcas, se sim, faz o sorteio
             if(places.get(place) < allArcsWeight){
-                //faz sorteio
-            } //se não, não faz sorteio
-            // o que retornar e como ajustar o execute?
-
-            //conflictingArcs
+                unselectedArcs.addAll(raffle(conflictingArcs));
+            } else {
+                break;//
+            }
         }
-
-
-
-        //nesse caso eu ordeno e comparo os lugares de origem, se for o mesmo, tem que fazer um sorteio, mas só se a quantidade de marcas for menor que todas os pesos dos arcos
-        //preciso a origem, a transação final, o peso do arco e a quantidade de marcas
-
+        return unselectedArcs;
     }
 
-    private void raffle(LinkedList<Arc> conflictingArcs){
+    private LinkedList<Arc> raffle(LinkedList<Arc> conflictingArcs){
+        int numberOfPlaces = places.size();
+        int r;
+        LinkedList<Arc> unselectedArcs = new LinkedList<>();
 
+        do {
+            r = (int) (Math.random() * conflictingArcs.size());
+            numberOfPlaces = numberOfPlaces - conflictingArcs.get(r).getWeight();
 
+            for (Arc a : conflictingArcs) {
+                if (a.getWeight() > numberOfPlaces) {
+                    unselectedArcs.add(conflictingArcs.remove(r));
+                }
+            }
+        } while(numberOfPlaces > 0 && !conflictingArcs.isEmpty());
 
-
+        return unselectedArcs;
     }
 
     private LinkedList<String> getAllDistinctPlaces(LinkedList<Arc> arcList){
@@ -182,11 +205,12 @@ public class Cycle {
             if(a.getDestination().startsWith("T") && a.getOrigin().startsWith("L")){
                 //procuro todos os arcos que tem como destino transações e verifico se a origem é um lugar
                 for (Transition t: transitions) {
-                    if(t.getName().equalsIgnoreCase(a.getDestination()) && t.isEnabled())
+                    if(t.getName().equalsIgnoreCase(a.getDestination()) && t.isEnabled()) {
                         //verifico se a transação mapeada como destino naquele arco está habilitada
                         //se sim, adiciono ela na lista de arcos possíveis
                         arcLinkedList.add(a);
                         break;
+                    }
                 }
             }
         }
@@ -195,7 +219,6 @@ public class Cycle {
     }
 
 
-    //TODO run code inspector
-    //TODO remove unused code
+    //TODO controle por ciclo
 
 }

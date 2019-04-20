@@ -12,7 +12,9 @@ public class App {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        //TODO tratamento de erros
+        //TODO run code inspector
+        //TODO remove unused code
     }
 
 }

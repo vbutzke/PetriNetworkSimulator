@@ -26,7 +26,7 @@ public class UserInputController {
             case 4:
                 break;
             default:
-                System.out.println("A opção selecionada não é válida. Por favor selecione 1, 2 ou 3");
+                System.out.println("A opção selecionada não é válida. Por favor selecione 1, 2, 3 ou 4");
                 initializeProgram();
         }
     }
@@ -42,7 +42,7 @@ public class UserInputController {
 
     }
 
-    private void help() throws IOException {
+    private void help() {
         System.out.println(CustomMessages.FILE_FORMAT.getMessage());
         System.out.println("Digite 0 para um exemplo de arquivo, ou qualquer outro número para continuar");
 
