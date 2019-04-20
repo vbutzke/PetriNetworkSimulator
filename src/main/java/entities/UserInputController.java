@@ -48,6 +48,21 @@ public class UserInputController {
     }
 
     private void interactiveInput(){
+
+        do{
+            System.out.println(CustomMessages.PLACES_INPUT.getMessage());
+        } while (!validatePlacesInput(scanner.nextLine()));
+
+        do{
+            System.out.println(CustomMessages.ARCS_INPUT.getMessage());
+        }
+        while(!validateArcsInput(scanner.nextLine()));
+
+        do {
+            System.out.println(CustomMessages.TRANSITIONS_INPUT.getMessage());
+        } while(!validateTransitionsInput(scanner.nextLine()));
+
+        System.out.println(CustomMessages.INPUT_MESSAGE.getMessage());
         //TODO interactive input and validations
     }
 
@@ -62,5 +77,50 @@ public class UserInputController {
             default:
                 break;
         }
+    }
+
+    private boolean validatePlacesInput(String input){
+        return validate(input, "L", CustomMessages.ERROR_TRANSITIONS_INPUT.getMessage(), ",");
+    }
+
+    private boolean validateArcsInput(String input){
+
+        String [] arcs = input.split(",");
+
+        for (String a: arcs) {
+            String [] values = a.split(" ");
+
+            if(!validate(values[1], "L", CustomMessages.ERROR_ARCS_INPUT.getMessage(), "") ||
+               !validate(values[2], "T", CustomMessages.ERROR_ARCS_INPUT.getMessage(), "") ||
+               !validate(values[0]+values[3], "A", CustomMessages.ERROR_ARCS_INPUT.getMessage(), "")){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private boolean validateTransitionsInput(String input){
+        return validate(input, "T", CustomMessages.ERROR_TRANSITIONS_INPUT.getMessage(), ",");
+    }
+
+    private boolean isSuffixAnumber(String suffix){
+        try{
+            Integer.parseInt(suffix);
+        } catch (NumberFormatException e){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean validate(String input, String prefix, String error, String regex){
+        String[] token = input.split(regex);
+        for (String t:token) {
+            if(t.startsWith(prefix) && !isSuffixAnumber(t.substring(1))){
+                System.out.println(error);
+                return false;
+            }
+        }
+        return true;
     }
 }

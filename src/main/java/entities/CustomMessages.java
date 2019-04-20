@@ -42,7 +42,14 @@ public enum CustomMessages {
     INVALID_OPTION_ERROR("A opção selecionada não é válida. Por favor selecione 1, 2, 3 ou 4"),
     HELP_OPTION("Digite 0 para um exemplo de arquivo, ou qualquer outro número para continuar"),
     DOWNLOAD_OPTION("Digite 0 para fazer o download do arquivo, ou outro número para sair"),
-    DOWNLOAD_COMPLETED("Download Completo!");
+    DOWNLOAD_COMPLETED("Download Completo!"),
+    PLACES_INPUT("Insira a linha de lugares: \n"),
+    ARCS_INPUT("Insira a linha de arcos: \n"),
+    TRANSITIONS_INPUT("Insira a linha de transições: \n"),
+    INPUT_MESSAGE("Iniciando o processamento da rede ... "),
+    ERROR_PLACES_INPUT("Linha de lugares inválida. Os lugares devem iniciar com a letra L e a linha deve estar no seguinte formato: L1 2,L2 4 \n"),
+    ERROR_ARCS_INPUT("Linha de arcos inválida. A linha de arcos deve estar no seguinte formato: A1 L1 T1 2,A2 T1 L2 3 \n"),
+    ERROR_TRANSITIONS_INPUT("Linha de transição inválida. As transições devem iniciar com a letra T a linha estar no seguinte formato: T1, T2, T3 \n");
 
     private String message;
 
