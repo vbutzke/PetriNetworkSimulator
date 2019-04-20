@@ -22,7 +22,6 @@ public class CycleController {
      public void executeCycle(){
          buildOutput();
          cycle.execute();
-         //cycle.printCycle(); //TODO remover essa linha
          buildOutput();
          printOutput();
      }
@@ -33,22 +32,15 @@ public class CycleController {
          Hashtable<String, Integer> places  = cycle.getPlaces();
          LinkedList<Transition> transitions = cycle.getTransitions();
 
-         //TODO formatar passos
-
          for (String key : places.keySet()) {
             header = header + key + " | ";
             line = line + places.get(key) + " | ";
          }
 
-         //TODO formatar places
-
          for (Transition transition : transitions) {
-             header = header + transition.getName() + " | "; //TODO formatar output
+             header = header + transition.getName() + " | ";
              line = line + transition.isEnabled() + " | ";
          }
-
-         //TODO formatar transitions
-
 
          outputData.set(0, header);
          outputData.add(line);
@@ -63,7 +55,7 @@ public class CycleController {
      public String[] getOutputData(){
          String[] output =  new String[outputData.size()];
          for (int i=0; i< outputData.size(); i++){
-            output[i] = outputData.get(i);
+            output[i] = outputData.get(i).replaceAll("\\|", "~");
          }
          return output;
      }

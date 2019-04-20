@@ -13,7 +13,7 @@
         return size;
     }
 
-    public int getLargestPlaceCellSize(){ //TODO aqui não falha por causa das linhas anteriores?
+    public int getLargestPlaceCellSize(){ //aqui não falha por causa das linhas anteriores?
         int placeNameSize = getLargestPlaceNameSize();
         int placeNumSize = getLargestPlaceNumSize();
 

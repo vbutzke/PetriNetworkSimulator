@@ -33,13 +33,13 @@ public class UserInputController {
 
     private void importFromFile() throws IOException {
         FileController fileController = new FileController();
-        String[] test = fileController.getLines(fileController.readFile("cenario6.txt"));
+        String[] test = fileController.getLines(fileController.readFile("cenario3.txt"));
         CycleController cycleController = new CycleController(test[0], test[2], test[1]);
         cycleController.executeCycle();
         System.out.println(CustomMessages.DOWNLOAD_OPTION.getMessage());
         switch(Integer.parseInt(scanner.nextLine())){
             case 0:
-                fileController.writeToFile("output.txt", cycleController.getOutputData());
+                fileController.writeToFile("output.csv", cycleController.getOutputData());
                 System.out.println(CustomMessages.DOWNLOAD_COMPLETED.getMessage());
                 break;
             default:

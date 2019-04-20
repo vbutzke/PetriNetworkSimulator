@@ -71,7 +71,7 @@ public class Cycle {
             }
             transitions.get(i).setEnabled(places);
             if(transitions.get(i).isEnabled()){
-                i--;
+               i--;
             }
         }
         nextStep();
