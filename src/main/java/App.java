@@ -14,6 +14,8 @@ public class App {
         }
         //TODO run code inspector
         //TODO remove unused code
+        //TODO Fix scenarios 5 and 6
+        //TODO Input path
     }
 
 }

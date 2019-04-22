@@ -129,7 +129,4 @@ public class Cycle {
         this.transitions = transitions;
     }
 
-
-    //TODO controle por ciclo
-
 }
