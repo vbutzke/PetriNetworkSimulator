@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd91e58-670a-4158-b6d0-84dcdc7f5d56" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controllers/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Arc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Arc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/CustomMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/CustomMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Cycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Cycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Transition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Transition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entities/UserInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/UserInputController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/anotacoes.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -37,34 +45,100 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/UserInputController.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+            <state relative-caret-position="255">
+              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#help#0;class#UserInputController#0" />
-                <element signature="method#validatePlacesInput#0;class#UserInputController#0" />
-                <element signature="method#validateArcsInput#0;class#UserInputController#0" />
-                <element signature="method#validateTransitionsInput#0;class#UserInputController#0" />
-                <element signature="method#isSuffixAnumber#0;class#UserInputController#0" />
-                <element signature="method#validate#0;class#UserInputController#0" />
-                <element signature="method#execute#0;class#UserInputController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entities/CustomMessages.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="51" column="150" selection-start-line="51" selection-start-column="150" selection-end-line="51" selection-end-column="150" />
+            <state relative-caret-position="123">
+              <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
               <folding>
-                <element signature="e#3093#3094#0" expanded="true" />
-                <element signature="e#3123#3124#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#CycleController#0;class#CycleController#0" />
+                <element signature="method#getOutputData#0;class#CycleController#0" />
+                <element signature="method#isArcOnTransition#0;class#CycleController#0" />
+                <element signature="method#raffle#0;class#CycleController#0" />
+                <element signature="method#getAllDistinctPlaces#0;class#CycleController#0" />
+                <element signature="method#getAllPlaceToTransitionArcs#0;class#CycleController#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="79">
+              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#77#123#0" expanded="true" />
+                <element signature="method#Cycle#0;class#Cycle#0" />
+                <element signature="method#fillPlaces#0;class#Cycle#0" />
+                <element signature="method#fillArcs#0;class#Cycle#0" />
+                <element signature="method#fillTransitions#0;class#Cycle#0" />
+                <element signature="e#1854#1855#0" expanded="true" />
+                <element signature="e#1883#1884#0" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="e#1950#1951#0" expanded="true" />
+                <element signature="e#2004#2005#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#3300#3301#0" expanded="true" />
+                <element signature="e#3336#3337#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Arc.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+              <folding>
+                <element signature="e#1655#1656#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+                <element signature="e#1727#1728#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+                <element signature="e#1786#1787#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/Transition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="55">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1296#1297#0" expanded="true" />
+                <element signature="e#1328#1329#0" expanded="true" />
+                <element signature="e#1359#1360#0" expanded="true" />
+                <element signature="e#1386#1387#0" expanded="true" />
+                <element signature="e#2408#2409#0" expanded="true" />
+                <element signature="e#2437#2438#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controllers/FileController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -88,20 +162,22 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/ArcTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Arc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Transition.java" />
-        <option value="$PROJECT_DIR$/src/main/java/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/FileController.java" />
         <option value="$PROJECT_DIR$/test.txt" />
         <option value="$PROJECT_DIR$/cenario2.txt" />
-        <option value="$PROJECT_DIR$/cenario3.txt" />
         <option value="$PROJECT_DIR$/cenario4.txt" />
         <option value="$PROJECT_DIR$/cenario5.txt" />
         <option value="$PROJECT_DIR$/cenario6.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/Cycle.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/anotacoes.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entities/CustomMessages.java" />
+        <option value="$PROJECT_DIR$/cenario3.txt" />
+        <option value="$PROJECT_DIR$/src/cenario7.txt" />
+        <option value="$PROJECT_DIR$/cenario8.txt" />
         <option value="$PROJECT_DIR$/src/main/java/entities/UserInputController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/CustomMessages.java" />
+        <option value="$PROJECT_DIR$/src/main/java/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/FileController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Transition.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/Cycle.java" />
       </list>
     </option>
   </component>
@@ -161,12 +237,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="PetriNetwork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetriNetwork" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -181,10 +251,19 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555901029090" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555917376730" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vivip\Projects\SistDist\PetriNetwork" />
+      <recent name="C:\Users\vivip\Projects\SistDist\PetriNetwork\src" />
+      <recent name="C:\Users\vivip\Projects\SistDist\PetriNetwork\src\main" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -227,12 +306,12 @@
       <workItem from="1554356353520" duration="5202000" />
       <workItem from="1554776721492" duration="597000" />
       <workItem from="1555199524357" duration="13343000" />
-      <workItem from="1555705624309" duration="25676000" />
+      <workItem from="1555705624309" duration="39539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75204000" />
+    <option name="totallyTimeSpent" value="89067000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -247,20 +326,21 @@
     <frame x="56" y="-7" width="1231" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22459437" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22459437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.6451078" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.49253732" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.07462686" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.07628524" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46268657" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.5257048" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.52902156" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3283582" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.3283582" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -354,39 +434,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="33" lean-forward="true" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew.bat">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/FileController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Transition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="method#printTransition#0;class#Transition#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -402,59 +451,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
+    <entry file="file://$PROJECT_DIR$/cenario4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="29" column="40" lean-forward="true" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#interactiveInput#0;class#CycleController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="222" column="6" selection-start-line="222" selection-start-column="6" selection-end-line="222" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#fillPlaces#0;class#Cycle#0" />
-            <element signature="method#fillArcs#0;class#Cycle#0" />
-            <element signature="method#fillTransitions#0;class#Cycle#0" />
-            <element signature="method#isArcOnTransition#0;class#Cycle#0" />
-            <element signature="e#2865#2866#0" expanded="true" />
-            <element signature="e#2947#2948#0" expanded="true" />
-            <element signature="e#3014#3015#0" expanded="true" />
-            <element signature="e#3102#3103#0" expanded="true" />
-            <element signature="e#3176#3177#0" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="method#interactiveInput#0;class#Cycle#0" />
-            <element signature="method#printCycle#0;class#Cycle#0" />
-            <element signature="method#printPlaces#0;class#Cycle#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Arc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding>
-            <element signature="e#1626#1627#0" expanded="true" />
-            <element signature="e#1655#1656#0" expanded="true" />
-            <element signature="e#1693#1694#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#1757#1758#0" expanded="true" />
-            <element signature="e#1786#1787#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cenario3.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="34">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -466,49 +466,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cenario6.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cenario4.txt">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cenario2.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="5" />
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cenario1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/CustomMessages.java">
+    <entry file="file://$PROJECT_DIR$/cenario3.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="51" column="150" selection-start-line="51" selection-start-column="150" selection-end-line="51" selection-end-column="150" />
-          <folding>
-            <element signature="e#3093#3094#0" expanded="true" />
-            <element signature="e#3123#3124#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cenario8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cenario7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/UserInputController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="32" column="9" lean-forward="true" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+        <state relative-caret-position="741">
+          <caret line="120" column="59" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#importFromFile#0;class#UserInputController#0" />
+            <element signature="method#interactiveInput#0;class#UserInputController#0" />
             <element signature="method#help#0;class#UserInputController#0" />
             <element signature="method#validatePlacesInput#0;class#UserInputController#0" />
             <element signature="method#validateArcsInput#0;class#UserInputController#0" />
@@ -516,6 +521,99 @@
             <element signature="method#isSuffixAnumber#0;class#UserInputController#0" />
             <element signature="method#validate#0;class#UserInputController#0" />
             <element signature="method#execute#0;class#UserInputController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/CustomMessages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Arc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="e#1727#1728#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#1786#1787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/FileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#CycleController#0;class#CycleController#0" />
+            <element signature="method#getOutputData#0;class#CycleController#0" />
+            <element signature="method#isArcOnTransition#0;class#CycleController#0" />
+            <element signature="method#raffle#0;class#CycleController#0" />
+            <element signature="method#getAllDistinctPlaces#0;class#CycleController#0" />
+            <element signature="method#getAllPlaceToTransitionArcs#0;class#CycleController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Transition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1296#1297#0" expanded="true" />
+            <element signature="e#1328#1329#0" expanded="true" />
+            <element signature="e#1359#1360#0" expanded="true" />
+            <element signature="e#1386#1387#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2437#2438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#77#123#0" expanded="true" />
+            <element signature="method#Cycle#0;class#Cycle#0" />
+            <element signature="method#fillPlaces#0;class#Cycle#0" />
+            <element signature="method#fillArcs#0;class#Cycle#0" />
+            <element signature="method#fillTransitions#0;class#Cycle#0" />
+            <element signature="e#1854#1855#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#2004#2005#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#3300#3301#0" expanded="true" />
+            <element signature="e#3336#3337#0" expanded="true" />
           </folding>
         </state>
       </provider>

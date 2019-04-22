@@ -29,16 +29,13 @@ public class Arc {
         String oSuf = origin.substring(1);
         String dSuf = destination.substring(1);
 
-        if((o!='L' && o!= 'T') ||
-           (d!='L' && d!= 'T') || //quando não é L ou T
-           (o==d && o=='L')    || // quando os dois são L
-           !isSuffixAnumber(oSuf) ||
-           !isSuffixAnumber(dSuf) ||
-           (o==d && oSuf.equalsIgnoreCase(dSuf))  // quando os dois são T e o resto é igual
-        )
-            return false;
-
-        return true;
+        // quando os dois são T e o resto é igual
+        return (o == 'L' || o == 'T') &&
+                (d == 'L' || d == 'T') && //quando não é L ou T
+                (o != d || o != 'L') && // quando os dois são L
+                isSuffixAnumber(oSuf) &&
+                isSuffixAnumber(dSuf) &&
+                (o != d || !oSuf.equalsIgnoreCase(dSuf));
     }
 
     private boolean isSuffixAnumber(String suffix){
@@ -60,10 +57,6 @@ public class Arc {
 
     public int getWeight() {
         return weight;
-    }
-
-    public void printArc(){
-        System.out.println("Arc - Origin: "+origin+" - Destination: "+destination+ " - Weight: " + weight);
     }
 
 }

@@ -33,6 +33,8 @@ public enum CustomMessages {
                  "-------------------------- \n"),
 
     INIT_PROGRAM("--------------- Rede de Petri --------------- \n"+
+                 "AVISO: Este programa apresenta validações afim de garantir que uma rede válida seja executada." +
+                 "No entanto, não são tratados todos os casos de exceção para uma rede inválida.\n" +
                  " Opções de execução: \n"+
                  "   1. Importar de arquivo\n"+
                  "   2. Rede interativa\n"+
@@ -49,9 +51,10 @@ public enum CustomMessages {
     INPUT_MESSAGE("Iniciando o processamento da rede ... "),
     ERROR_PLACES_INPUT("Linha de lugares inválida. Os lugares devem iniciar com a letra L e a linha deve estar no seguinte formato: L1 2,L2 4 \n"),
     ERROR_ARCS_INPUT("Linha de arcos inválida. A linha de arcos deve estar no seguinte formato: A1 L1 T1 2,A2 T1 L2 3 \n"),
-    ERROR_TRANSITIONS_INPUT("Linha de transição inválida. As transições devem iniciar com a letra T a linha estar no seguinte formato: T1, T2, T3 \n");
+    ERROR_TRANSITIONS_INPUT("Linha de transição inválida. As transições devem iniciar com a letra T a linha estar no seguinte formato: T1, T2, T3 \n"),
+    FILE_PATH("Insira o caminho do arquivo \n");
 
-    private String message;
+    private final String message;
 
     CustomMessages(String message){
         this.message = message;

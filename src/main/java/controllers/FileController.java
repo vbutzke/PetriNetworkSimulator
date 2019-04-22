@@ -7,13 +7,14 @@ public class FileController {
     public String readFile(String fileName) throws IOException {
         FileReader fileReader = new FileReader(fileName);
         BufferedReader br = new BufferedReader(fileReader);
-        String line, file = "";
+        String line;
+        StringBuilder file = new StringBuilder();
         while(( line = br.readLine())!=null){
-            file = file + line + "\n";
+            file.append(line).append("\n");
         }
         br.close();
         fileReader.close();
-        return file;
+        return file.toString();
     }
 
     public String[] getLines(String file){

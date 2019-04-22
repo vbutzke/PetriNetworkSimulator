@@ -7,14 +7,15 @@ import java.util.Scanner;
 
 public class UserInputController {
 
-    private Scanner scanner = new Scanner(System.in);
-    private FileController fileController = new FileController();
+    private final Scanner scanner = new Scanner(System.in);
+    private final FileController fileController = new FileController();
 
     public void initializeProgram() throws IOException {
         System.out.println(CustomMessages.INIT_PROGRAM.getMessage());
         switch (Integer.parseInt(scanner.nextLine())){
             case 1:
-                execute(importFromFile());
+                System.out.println(CustomMessages.FILE_PATH.getMessage());
+                execute(importFromFile(scanner.nextLine()));
                 initializeProgram();
                 break;
             case 2:
@@ -30,11 +31,10 @@ public class UserInputController {
                 System.out.println(CustomMessages.INVALID_OPTION_ERROR.getMessage());
                 initializeProgram();
         }
-
     }
 
-    private String[] importFromFile() throws IOException {
-        return fileController.getLines(fileController.readFile("cenario3.txt"));
+    private String[] importFromFile(String filePath) throws IOException {
+        return fileController.getLines(fileController.readFile(filePath));
     }
 
     private String[] interactiveInput(){
@@ -127,4 +127,5 @@ public class UserInputController {
             System.out.println(CustomMessages.DOWNLOAD_COMPLETED.getMessage());
         }
     }
+
 }
