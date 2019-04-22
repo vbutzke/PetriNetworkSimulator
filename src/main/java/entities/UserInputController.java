@@ -34,7 +34,7 @@ public class UserInputController {
     }
 
     private String[] importFromFile() throws IOException {
-        return fileController.getLines(fileController.readFile("cenario3.txt"));
+        return fileController.getLines(fileController.readFile("cenario7.txt"));
     }
 
     private String[] interactiveInput(){
