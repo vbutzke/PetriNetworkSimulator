@@ -17,31 +17,25 @@ public class CycleController {
      }
 
      public void executeCycle(){
-         buildOutput();
+         buildHeader();
          execute();
-         //cycle.execute();
-         //buildOutput();
          printOutput();
      }
 
-     private void buildOutput(){
+     private void buildHeader(){
          String header = " | Passos | ";
-         //String line = " | " + cycle.getStep() + " | ";
          Hashtable<String, Integer> places  = cycle.getPlaces();
          LinkedList<Transition> transitions = cycle.getTransitions();
 
          for (String key : places.keySet()) {
             header = header + key + " | ";
-          //  line = line + places.get(key) + " | ";
          }
 
          for (Transition transition : transitions) {
              header = header + transition.getName() + " | ";
-            // line = line + transition.isEnabled() + " | ";
          }
 
          outputData.set(0, header);
-        // outputData.add(line);
      }
 
      private void printOutput(){
@@ -58,37 +52,41 @@ public class CycleController {
          return output;
      }
 
-
-    public void execute(){
+     private void execute(){
         LinkedList<Arc> unselectedArcs; // pego arcos que NÃO devem ser executados
         boolean isArcOnTransition;
         int enabledTransitions = 0;
+        int transitionsSize = cycle.getTransitions().size();
+        Transition transition;
+
         outputData.add(cycle.getOutput());
         do {
             unselectedArcs = mapAndSolveConflicts(); // pego os arcos que NÃO devem ser executados
 
-            for (int i = 0; i < cycle.getTransitions().size(); i++) {
+            for (int i = 0; i < transitionsSize; i++) {
+
+                transition = cycle.getTransitions().get(i);
+
                 isArcOnTransition = false;
                 for (Arc a : unselectedArcs) {
-                    if (isArcOnTransition(cycle.getTransitions().get(i), a)) { //se o algum arco não selecionado está na transição atual
+                    if (isArcOnTransition(transition, a)) { //se o algum arco não selecionado está na transição atual
                         isArcOnTransition = true;
                         break;
                     }
                 }
 
                 if (!isArcOnTransition) { //se não tenho conflitos nos arcos da transição, executo ela
-                   // places = cycle.getTransitions().get(i).execute(cycle.getPlaces());
-                    cycle.setPlaces(cycle.getTransitions().get(i).execute(cycle.getPlaces()));
+                    cycle.setPlaces(transition.execute(cycle.getPlaces()));
                 } else {
                     enabledTransitions--;
-                }
-                //número de conflitos é meu número de transições erroneamente habilitadas
+                }//número de conflitos é meu número de transições erroneamente habilitadas
             }
 
-            for(int j=0; j<cycle.getTransitions().size(); j++){
-                cycle.getTransitions().get(j).setEnabled(cycle.getPlaces());
+            for(int j=0; j<transitionsSize; j++){
+                transition = cycle.getTransitions().get(j);
+                transition.setEnabled(cycle.getPlaces());
 
-                if(cycle.getTransitions().get(j).isEnabled()) {
+                if(transition.isEnabled()) {
                     enabledTransitions++;
                 } else {
                     enabledTransitions = (enabledTransitions>0) ? enabledTransitions-1 : 0;
@@ -98,18 +96,18 @@ public class CycleController {
             outputData.add(cycle.getOutput());
         } while(enabledTransitions>0); //até que nenhum arco possa mais ser executado
 
-    }
+     }
 
-    private boolean isArcOnTransition(Transition transition, Arc arc){
+     private boolean isArcOnTransition(Transition transition, Arc arc){
         for (Arc transArc: transition.getInArcs()) {
             if (transArc == arc)
                 return true;
         }
 
         return false;
-    }
+     }
 
-    private LinkedList<Arc> mapAndSolveConflicts(){
+     private LinkedList<Arc> mapAndSolveConflicts(){
 
         LinkedList<Arc> arcList = getAllPlaceToTransitionArcs();
         LinkedList<String> placesList = getAllDistinctPlaces(arcList);
@@ -135,9 +133,9 @@ public class CycleController {
             }
         }
         return unselectedArcs;
-    }
+     }
 
-    private LinkedList<Arc> raffle(LinkedList<Arc> conflictingArcs){
+     private LinkedList<Arc> raffle(LinkedList<Arc> conflictingArcs){
         int numberOfPlaces = cycle.getPlaces().size();
         int r;
         LinkedList<Arc> unselectedArcs = new LinkedList<>();
@@ -153,12 +151,12 @@ public class CycleController {
                 }
             }
 
-        } while(numberOfPlaces > 0 && !conflictingArcs.isEmpty()); // loop infinito
+        } while(numberOfPlaces > 0 && !conflictingArcs.isEmpty());
 
         return unselectedArcs;
-    }
+     }
 
-    private LinkedList<String> getAllDistinctPlaces(LinkedList<Arc> arcList){
+     private LinkedList<String> getAllDistinctPlaces(LinkedList<Arc> arcList){
 
         LinkedList<String> placesList = new LinkedList<>();
 
@@ -169,9 +167,9 @@ public class CycleController {
             }
         }
         return placesList;
-    }
+     }
 
-    private LinkedList<Arc> getAllPlaceToTransitionArcs(){
+     private LinkedList<Arc> getAllPlaceToTransitionArcs(){
 
         LinkedList<Arc> arcLinkedList = new LinkedList<>();
         for (Arc a: cycle.getArcs()) {
@@ -189,9 +187,6 @@ public class CycleController {
         }
 
         return arcLinkedList;
-    }
-
-
-
+     }
 
 }

@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="efd91e58-670a-4158-b6d0-84dcdc7f5d56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cenario8.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cenario7.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cenario7.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/controllers/CycleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/controllers/CycleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/entities/Cycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/entities/Cycle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/entities/UserInputController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Cycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Cycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/UserInputController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/UserInputController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -47,16 +37,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+            <state relative-caret-position="-509">
+              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#CycleController#0;class#CycleController#0" />
+                <element signature="method#executeCycle#0;class#CycleController#0" />
                 <element signature="method#printOutput#0;class#CycleController#0" />
                 <element signature="method#getOutputData#0;class#CycleController#0" />
+                <element signature="method#isArcOnTransition#0;class#CycleController#0" />
+                <element signature="method#mapAndSolveConflicts#0;class#CycleController#0" />
+                <element signature="method#raffle#0;class#CycleController#0" />
+                <element signature="method#getAllDistinctPlaces#0;class#CycleController#0" />
+                <element signature="method#getAllPlaceToTransitionArcs#0;class#CycleController#0" />
               </folding>
             </state>
           </provider>
@@ -82,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+            <state relative-caret-position="442">
+              <caret line="61" column="22" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#Cycle#0;class#Cycle#0" />
@@ -160,13 +156,13 @@
         <option value="$PROJECT_DIR$/cenario3.txt" />
         <option value="$PROJECT_DIR$/src/cenario7.txt" />
         <option value="$PROJECT_DIR$/cenario8.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/UserInputController.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/Cycle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controllers/CycleController.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="108" />
     <option name="y" value="30" />
     <option name="width" value="1797" />
@@ -228,7 +224,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555907542100" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555907701707" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -282,12 +278,12 @@
       <workItem from="1554356353520" duration="5202000" />
       <workItem from="1554776721492" duration="597000" />
       <workItem from="1555199524357" duration="13343000" />
-      <workItem from="1555705624309" duration="32362000" />
+      <workItem from="1555705624309" duration="32942000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81890000" />
+    <option name="totallyTimeSpent" value="82470000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -299,7 +295,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-7" width="1231" height="735" extended-state="6" />
+    <frame x="56" y="-7" width="1231" height="735" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22459437" />
@@ -527,19 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="94" column="17" lean-forward="true" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CycleController#0;class#CycleController#0" />
-            <element signature="method#printOutput#0;class#CycleController#0" />
-            <element signature="method#getOutputData#0;class#CycleController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cenario8.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -551,6 +534,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="5" lean-forward="true" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="61" column="22" lean-forward="true" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Cycle#0;class#Cycle#0" />
+            <element signature="method#fillPlaces#0;class#Cycle#0" />
+            <element signature="method#fillArcs#0;class#Cycle#0" />
+            <element signature="method#fillTransitions#0;class#Cycle#0" />
+            <element signature="e#1801#1802#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
+            <element signature="e#3017#3045#1" />
+            <element signature="e#1950#1951#0" expanded="true" />
+            <element signature="e#3098#3133#1" />
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2069#2070#0" expanded="true" />
+            <element signature="e#2091#2092#0" expanded="true" />
+            <element signature="method#printCycle#0;class#Cycle#0" />
+            <element signature="e#3336#3337#0" expanded="true" />
+            <element signature="e#3417#3418#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -572,28 +581,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        <state relative-caret-position="-509">
+          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#Cycle#0;class#Cycle#0" />
-            <element signature="method#fillPlaces#0;class#Cycle#0" />
-            <element signature="method#fillArcs#0;class#Cycle#0" />
-            <element signature="method#fillTransitions#0;class#Cycle#0" />
-            <element signature="e#1801#1802#0" expanded="true" />
-            <element signature="e#1883#1884#0" expanded="true" />
-            <element signature="e#3017#3045#1" />
-            <element signature="e#1950#1951#0" expanded="true" />
-            <element signature="e#3098#3133#1" />
-            <element signature="e#2038#2039#0" expanded="true" />
-            <element signature="e#2069#2070#0" expanded="true" />
-            <element signature="e#2091#2092#0" expanded="true" />
-            <element signature="method#printCycle#0;class#Cycle#0" />
-            <element signature="e#3336#3337#0" expanded="true" />
-            <element signature="e#3417#3418#0" expanded="true" />
-            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="method#CycleController#0;class#CycleController#0" />
+            <element signature="method#executeCycle#0;class#CycleController#0" />
+            <element signature="method#printOutput#0;class#CycleController#0" />
+            <element signature="method#getOutputData#0;class#CycleController#0" />
+            <element signature="method#isArcOnTransition#0;class#CycleController#0" />
+            <element signature="method#mapAndSolveConflicts#0;class#CycleController#0" />
+            <element signature="method#raffle#0;class#CycleController#0" />
+            <element signature="method#getAllDistinctPlaces#0;class#CycleController#0" />
+            <element signature="method#getAllPlaceToTransitionArcs#0;class#CycleController#0" />
           </folding>
         </state>
       </provider>
