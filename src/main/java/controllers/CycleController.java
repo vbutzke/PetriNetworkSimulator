@@ -8,9 +8,9 @@ import java.util.LinkedList;
 import java.util.Scanner;
 
 public class CycleController {
-     private Cycle cycle;
-     private LinkedList<String> outputData = new LinkedList<>();
-     private Scanner scanner = new Scanner(System.in);
+     private final Cycle cycle;
+     private final LinkedList<String> outputData = new LinkedList<>();
+     private final Scanner scanner = new Scanner(System.in);
 
      public CycleController(String placesLine, String transitionsLine, String arcsLine){
         cycle = new Cycle(placesLine, transitionsLine, arcsLine);
@@ -18,19 +18,19 @@ public class CycleController {
      }
 
      private void printHeader(){
-         String header = " | Passos | ";
+         StringBuilder header = new StringBuilder(" | Passos | ");
          Hashtable<String, Integer> places  = cycle.getPlaces();
          LinkedList<Transition> transitions = cycle.getTransitions();
 
          for (String key : places.keySet()) {
-            header = header + key + " | ";
+            header.append(key).append(" | ");
          }
 
          for (Transition transition : transitions) {
-             header = header + transition.getName() + " | ";
+             header.append(transition.getName()).append(" | ");
          }
 
-         outputData.set(0, header);
+         outputData.set(0, header.toString());
          System.out.println(header);
      }
 
@@ -53,13 +53,11 @@ public class CycleController {
         outputData.add(cycle.getOutput());
         System.out.println(cycle.getOutput());
         do {
-            unselectedArcs = mapAndSolveConflicts(); // pego os arcos que NÃO devem ser executados
-
             for (int i = 0; i < transitionsSize; i++) {
-
-                transition = cycle.getTransitions().get(i);
-
                 isArcOnTransition = false;
+                transition = cycle.getTransitions().get(i);
+                unselectedArcs = mapAndSolveConflicts(); // pego os arcos que NÃO devem ser executados
+
                 for (Arc a : unselectedArcs) {
                     if (isArcOnTransition(transition, a)) { //se o algum arco não selecionado está na transição atual
                         isArcOnTransition = true;
@@ -76,7 +74,7 @@ public class CycleController {
 
             for(int j=0; j<transitionsSize; j++){
                 transition = cycle.getTransitions().get(j);
-                transition.setEnabled(cycle.getPlaces());
+                transition.setEnabled(cycle.getPlaces()); //tem que levar em consideração o conflito
 
                 if(transition.isEnabled()) {
                     enabledTransitions++;

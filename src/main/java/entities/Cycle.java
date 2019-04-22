@@ -3,12 +3,13 @@ package entities;
 import java.util.Hashtable;
 import java.util.LinkedList;
 
+@SuppressWarnings("StringConcatenationInLoop")
 public class Cycle {
 
     private int step;
     private Hashtable<String, Integer> places = new Hashtable<>();
-    private LinkedList<Arc> arcs = new LinkedList<>();
-    private LinkedList<Transition> transitions = new LinkedList<>();
+    private final LinkedList<Arc> arcs = new LinkedList<>();
+    private final LinkedList<Transition> transitions = new LinkedList<>();
     private String output = "";
 
     public Cycle(String placesLine, String transitionsLine, String arcsLine) {
@@ -54,10 +55,6 @@ public class Cycle {
         }
     }
 
-    public int getStep() {
-        return step;
-    }
-
     public Hashtable<String, Integer> getPlaces() {
         return places;
     }
@@ -72,32 +69,6 @@ public class Cycle {
 
     public void nextStep(){
         step++;
-    }
-
-    public void printCycle(){
-        System.out.println("Step: "+step);
-        System.out.println("Places: ");
-        for (String key: places.keySet()) {
-            System.out.println(key+" - "+places.get(key));
-        }
-        System.out.println();
-        System.out.println("Arcs: ");
-        for (Arc arc: arcs) {
-            arc.printArc();
-        }
-        System.out.println();
-        System.out.println("Transitions: ");
-        for (Transition t:transitions) {
-            t.printTransition();
-        }
-        System.out.println();
-    }
-
-    public void printPlaces(){
-        System.out.println("Places: ");
-        for (String key: places.keySet()) {
-            System.out.println(key+" - "+places.get(key));
-        }
     }
 
     private void buildOutput(){
@@ -119,14 +90,6 @@ public class Cycle {
 
     public void setPlaces(Hashtable<String, Integer> places) {
         this.places = places;
-    }
-
-    public void setArcs(LinkedList<Arc> arcs) {
-        this.arcs = arcs;
-    }
-
-    public void setTransitions(LinkedList<Transition> transitions) {
-        this.transitions = transitions;
     }
 
 }

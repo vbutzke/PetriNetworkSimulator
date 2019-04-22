@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class UserInputController {
 
-    private Scanner scanner = new Scanner(System.in);
-    private FileController fileController = new FileController();
+    private final Scanner scanner = new Scanner(System.in);
+    private final FileController fileController = new FileController();
 
     public void initializeProgram() throws IOException {
         System.out.println(CustomMessages.INIT_PROGRAM.getMessage());
@@ -127,4 +127,5 @@ public class UserInputController {
             System.out.println(CustomMessages.DOWNLOAD_COMPLETED.getMessage());
         }
     }
+
 }

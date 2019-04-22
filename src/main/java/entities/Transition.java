@@ -5,12 +5,12 @@ import java.util.LinkedList;
 
 public class Transition {
 
-    private String          name;
-    private LinkedList<Arc> inArcs;
-    private LinkedList<Arc> outArcs;
+    private final String          name;
+    private final LinkedList<Arc> inArcs;
+    private final LinkedList<Arc> outArcs;
     private boolean         isEnabled;
-    private static String   outArc = "out";
-    private static String   inArc  = "in";
+    private static final String   outArc = "out";
+    private static final String   inArc  = "in";
 
     public Transition(String name, LinkedList<Arc> inArcs, LinkedList<Arc> outArcs, Hashtable<String, Integer> places) {
         this.name    = name;
@@ -24,14 +24,15 @@ public class Transition {
         int count = 0;
         boolean statusChange = false;
 
-        while(count < inArcs.size() && statusChange == false){
-            if((inArcs.get(count).getWeight() >  places.get(inArcs.get(count).getOrigin()) && isEnabled) ||
-               (inArcs.get(count).getWeight() <= places.get(inArcs.get(count).getOrigin()) && !isEnabled)){
+        while (count < inArcs.size() && !statusChange) {
+            if ((inArcs.get(count).getWeight() > places.get(inArcs.get(count).getOrigin()) && isEnabled) ||
+                    (inArcs.get(count).getWeight() <= places.get(inArcs.get(count).getOrigin()) && !isEnabled)) {
                 statusChange = true;
                 isEnabled = !isEnabled;
             }
             count++;
         }
+
     }
 
     public boolean isEnabled() {
@@ -45,7 +46,9 @@ public class Transition {
     public Hashtable<String, Integer> execute(Hashtable<String, Integer> places){
 
         if(isEnabled){
+            //noinspection ConstantConditions
             places = updatePlaces(inArcs, places, inArc);
+            //noinspection ConstantConditions
             places = updatePlaces(outArcs, places, outArc);
         }
 
@@ -76,24 +79,6 @@ public class Transition {
 
     public LinkedList<Arc> getInArcs() {
         return inArcs;
-    }
-
-    public LinkedList<Arc> getOutArcs() {
-        return outArcs;
-    }
-
-    public void printTransition(){
-        System.out.println("Transition: "+name);
-        System.out.println("In Arcs: ");
-        for (Arc arc: inArcs) {
-            arc.printArc();
-        }
-        System.out.println("Out Arcs: ");
-        for (Arc arc2: outArcs) {
-            arc2.printArc();
-        }
-        System.out.println("Is enabled: " +isEnabled);
-        System.out.println();
     }
 
 }
