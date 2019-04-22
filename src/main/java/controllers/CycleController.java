@@ -5,24 +5,19 @@ import entities.Cycle;
 import entities.Transition;
 import java.util.Hashtable;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class CycleController {
      private Cycle cycle;
-     private LinkedList<String> outputData;
+     private LinkedList<String> outputData = new LinkedList<>();
+     private Scanner scanner = new Scanner(System.in);
 
      public CycleController(String placesLine, String transitionsLine, String arcsLine){
         cycle = new Cycle(placesLine, transitionsLine, arcsLine);
-        outputData = new LinkedList<>();
         outputData.add(0, "");
      }
 
-     public void executeCycle(){
-         buildHeader();
-         execute();
-         printOutput();
-     }
-
-     private void buildHeader(){
+     private void printHeader(){
          String header = " | Passos | ";
          Hashtable<String, Integer> places  = cycle.getPlaces();
          LinkedList<Transition> transitions = cycle.getTransitions();
@@ -36,12 +31,7 @@ public class CycleController {
          }
 
          outputData.set(0, header);
-     }
-
-     private void printOutput(){
-         for (String line: outputData) {
-             System.out.println(line);
-         }
+         System.out.println(header);
      }
 
      public String[] getOutputData(){
@@ -52,14 +42,16 @@ public class CycleController {
          return output;
      }
 
-     private void execute(){
+     public void executeCycle(){
         LinkedList<Arc> unselectedArcs; // pego arcos que NÃO devem ser executados
         boolean isArcOnTransition;
         int enabledTransitions = 0;
         int transitionsSize = cycle.getTransitions().size();
         Transition transition;
 
+        printHeader();
         outputData.add(cycle.getOutput());
+        System.out.println(cycle.getOutput());
         do {
             unselectedArcs = mapAndSolveConflicts(); // pego os arcos que NÃO devem ser executados
 
@@ -93,6 +85,8 @@ public class CycleController {
                 }
             }
             cycle.nextStep();
+            scanner.nextLine();
+            System.out.println(cycle.getOutput());
             outputData.add(cycle.getOutput());
         } while(enabledTransitions>0); //até que nenhum arco possa mais ser executado
 

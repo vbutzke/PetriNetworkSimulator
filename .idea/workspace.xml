@@ -40,19 +40,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-509">
-              <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+            <state relative-caret-position="171">
+              <caret line="87" column="17" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#CycleController#0;class#CycleController#0" />
-                <element signature="method#executeCycle#0;class#CycleController#0" />
-                <element signature="method#printOutput#0;class#CycleController#0" />
-                <element signature="method#getOutputData#0;class#CycleController#0" />
+                <element signature="method#buildOutput#0;class#CycleController#0" />
                 <element signature="method#isArcOnTransition#0;class#CycleController#0" />
                 <element signature="method#mapAndSolveConflicts#0;class#CycleController#0" />
-                <element signature="method#raffle#0;class#CycleController#0" />
-                <element signature="method#getAllDistinctPlaces#0;class#CycleController#0" />
-                <element signature="method#getAllPlaceToTransitionArcs#0;class#CycleController#0" />
               </folding>
             </state>
           </provider>
@@ -61,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entities/UserInputController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
+            <state relative-caret-position="170">
+              <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#interactiveInput#0;class#UserInputController#0" />
@@ -72,7 +66,6 @@
                 <element signature="method#validateTransitionsInput#0;class#UserInputController#0" />
                 <element signature="method#isSuffixAnumber#0;class#UserInputController#0" />
                 <element signature="method#validate#0;class#UserInputController#0" />
-                <element signature="method#execute#0;class#UserInputController#0" />
               </folding>
             </state>
           </provider>
@@ -110,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/cenario7.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="5" lean-forward="true" selection-end-line="2" selection-end-column="5" />
+              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -162,7 +155,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="108" />
     <option name="y" value="30" />
     <option name="width" value="1797" />
@@ -224,7 +217,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555907701707" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555908946761" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -278,12 +271,12 @@
       <workItem from="1554356353520" duration="5202000" />
       <workItem from="1554776721492" duration="597000" />
       <workItem from="1555199524357" duration="13343000" />
-      <workItem from="1555705624309" duration="32942000" />
+      <workItem from="1555705624309" duration="33573000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82470000" />
+    <option name="totallyTimeSpent" value="83101000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,7 +288,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="56" y="-7" width="1231" height="735" extended-state="7" />
+    <frame x="56" y="-7" width="1231" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22459437" />
@@ -306,8 +299,8 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283582" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.011608624" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.021558871" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.07960199" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -523,20 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cenario8.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cenario7.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="5" lean-forward="true" selection-end-line="2" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/Cycle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -563,10 +542,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cenario7.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cenario8.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entities/UserInputController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
+        <state relative-caret-position="170">
+          <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#interactiveInput#0;class#UserInputController#0" />
@@ -576,26 +569,19 @@
             <element signature="method#validateTransitionsInput#0;class#UserInputController#0" />
             <element signature="method#isSuffixAnumber#0;class#UserInputController#0" />
             <element signature="method#validate#0;class#UserInputController#0" />
-            <element signature="method#execute#0;class#UserInputController#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controllers/CycleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-509">
-          <caret line="54" column="12" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        <state relative-caret-position="171">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="12" selection-end-line="87" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#CycleController#0;class#CycleController#0" />
-            <element signature="method#executeCycle#0;class#CycleController#0" />
-            <element signature="method#printOutput#0;class#CycleController#0" />
-            <element signature="method#getOutputData#0;class#CycleController#0" />
+            <element signature="method#buildOutput#0;class#CycleController#0" />
             <element signature="method#isArcOnTransition#0;class#CycleController#0" />
             <element signature="method#mapAndSolveConflicts#0;class#CycleController#0" />
-            <element signature="method#raffle#0;class#CycleController#0" />
-            <element signature="method#getAllDistinctPlaces#0;class#CycleController#0" />
-            <element signature="method#getAllPlaceToTransitionArcs#0;class#CycleController#0" />
           </folding>
         </state>
       </provider>
