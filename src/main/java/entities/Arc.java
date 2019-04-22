@@ -11,11 +11,7 @@ public class Arc {
     public Arc(String origin, String destination, int weight) throws InvalidParameterException{
 
         if(!arePrefixesValid(origin, destination)){
-            throw new InvalidParameterException("Os parâmetros de origem e destino do arco são inválidos. " +
-                                                "Os mesmos devem obedecer a seguinte regra: " +
-                                                "Ou a origem é um local e o destino é uma transição, " +
-                                                "ou a origem é uma transição e o destino é um local. " +
-                                                "ou a origem é uma transição e o destino também é uma transição" +
+            throw new InvalidParameterException(CustomMessages.ARC_EXCEPTION.getMessage() +
                                                 "Estes são os parâmetros passados: \n Origem: " + origin +
                                                 "\n Destino: " + destination);
         }

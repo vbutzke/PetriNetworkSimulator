@@ -96,9 +96,4 @@ public class Transition {
         System.out.println();
     }
 
-    //TODO validação nos in arcs pra quando tem conflito por marca
-    //TODO algoritmo de sorteio
-    //TODO tratamento de erros
-    //TODO instruções para user input
-    //TODO controle por ciclo
 }

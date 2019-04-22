@@ -12,6 +12,7 @@ public class CycleController {
      public CycleController(String placesLine, String transitionsLine, String arcsLine){
         cycle = new Cycle(placesLine, transitionsLine, arcsLine);
         outputData = new LinkedList<>();
+        outputData.add(0, "");
      }
 
      public void interactiveInput(String placesLine, String transitionsLine, String arcsLine){
@@ -19,8 +20,8 @@ public class CycleController {
      }
 
      public void executeCycle(){
+         buildOutput();
          cycle.execute();
-        // cycle.printCycle(); //TODO remover essa linha
          buildOutput();
          printOutput();
      }
@@ -37,18 +38,26 @@ public class CycleController {
          }
 
          for (Transition transition : transitions) {
-             header = header + transition.getName() + " | "; //TODO formatar output
+             header = header + transition.getName() + " | ";
              line = line + transition.isEnabled() + " | ";
          }
-         outputData.add(0, header);
-         outputData.add(line); //TODO testar com mais de uma linha de output pra ver o que acontece
 
+         outputData.set(0, header);
+         outputData.add(line);
      }
 
      private void printOutput(){
          for (String line: outputData) {
              System.out.println(line);
          }
+     }
+
+     public String[] getOutputData(){
+         String[] output =  new String[outputData.size()];
+         for (int i=0; i< outputData.size(); i++){
+            output[i] = outputData.get(i).replaceAll("\\|", "~");
+         }
+         return output;
      }
 
 }
